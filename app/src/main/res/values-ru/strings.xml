@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Auth app</string>
+    <string name="qrcode_bad_format">Неверный формат QR-кода</string>
+    <string name="qrcode_scan_error">При сканировании QR-кода произошла ошибка: %s</string>
+    <string name="qrcode_no_permission">Вы не предоставили разрешение на использование камеры для сканирования QR-кода</string>
+    <string name="add_account">Добавить аккаунт</string>
+    <string name="scan_qr">Сканировать QR-код</string>
+    <string name="password_visibility">Показать/скрыть ключ</string>
+    <string name="enter_key">Введите ключ</string>
+    <string name="key">Ключ</string>
+    <string name="enter_account_name">Введите название аккаунта</string>
+    <string name="account_name">Название аккаунта</string>
+    <string name="point_the_camera_at_the_qr_code">Наведите камеру на QR-код</string>
+    <string name="account_deleted">Аккаунт удален</string>
+    <string name="key_works">Ключ действует</string>
+    <string name="time_left">0:%02d</string>
+    <string name="copy_key">Скопировать ключ</string>
+    <string name="delete">Удалить</string>
+    <string name="delete_account_description">Вы действительно хотите удалить: %s ?</string>
+    <string name="cancel">Отменить</string>
+    <string name="ok">ОК</string>
+</resources>

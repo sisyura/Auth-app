@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Auth app</string>
+    <string name="qrcode_bad_format">Bad QRCode format</string>
+    <string name="qrcode_scan_error">An error occurred while scanning the QR code: %s</string>
+    <string name="qrcode_no_permission">You do not authorize the camera permission to scan the QR code</string>
+    <string name="add_account">Add account</string>
+    <string name="scan_qr">Scan QR code</string>
+    <string name="password_visibility">Show/hide key</string>
+    <string name="enter_key">Enter key</string>
+    <string name="key">Key</string>
+    <string name="enter_account_name">Enter account name</string>
+    <string name="account_name">Account name</string>
+    <string name="point_the_camera_at_the_qr_code">Point the camera at the QR code</string>
+    <string name="account_deleted">Account deleted</string>
+    <string name="key_works">Key is still valid for</string>
+    <string name="time_left">0:%02d</string>
+    <string name="copy_key">Copy key</string>
+    <string name="delete">Delete</string>
+    <string name="delete_account_description">Are you sure you want to delete: %s ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+</resources>
