@@ -89,6 +89,7 @@ object TOTP {
      * @param text the message or text to be authenticated.
      */
     private fun hmac_sha1(keyBytes: ByteArray, text: ByteArray): ByteArray {
+        require(keyBytes.isNotEmpty()) { "Key cannot be empty" }
         return try {
             val hmac: Mac = Mac.getInstance("HmacSHA1")
             val macKey = SecretKeySpec(keyBytes, "RAW")

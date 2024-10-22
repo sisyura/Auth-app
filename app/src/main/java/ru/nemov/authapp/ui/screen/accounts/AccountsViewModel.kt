@@ -34,6 +34,10 @@ class AccountsViewModel @Inject constructor(
         val base32 = Base32()
         val bytes = base32.decode(secretKey)
         val hexKey = Hex.encodeHexString(bytes)
-        return TOTP.getOTP(hexKey)
+        return try {
+            TOTP.getOTP(hexKey)
+        } catch (e: IllegalArgumentException) {
+            throw IllegalArgumentException(e)
+        }
     }
 }

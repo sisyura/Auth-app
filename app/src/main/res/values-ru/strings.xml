@@ -20,4 +20,5 @@
     <string name="delete_account_description">Вы действительно хотите удалить: %s ?</string>
     <string name="cancel">Отменить</string>
     <string name="ok">ОК</string>
+    <string name="key_generate_error">Не удалось сгенерировать код</string>
 </resources>

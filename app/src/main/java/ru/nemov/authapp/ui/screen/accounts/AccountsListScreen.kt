@@ -1,6 +1,7 @@
 package ru.nemov.authapp.ui.screen.accounts
 
 import android.app.Activity
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -193,7 +194,7 @@ private fun Accounts(
             sheetState = bottomSheetState,
             dragHandle = null
         ) {
-            AccountBottomSheetContent(selectedAccount, viewModel) {
+            AccountBottomSheetContent(selectedAccount, viewModel, context) {
                 scope.launch { bottomSheetState.hide() }
                 openBottomSheet = false
             }
@@ -220,6 +221,7 @@ private fun Accounts(
 private fun AccountBottomSheetContent(
     selectedAccount: AccountData?,
     viewModel: AccountsViewModel,
+    context: Context,
     onCloseBtnClick: () -> Unit
 ) {
     val clipboardManager = LocalClipboardManager.current
@@ -230,7 +232,11 @@ private fun AccountBottomSheetContent(
         while (true) {
             timeLeft = TOTP.getTimeRemaining()
             selectedAccount?.let { account ->
-                authCode = viewModel.getTOTPCode(account.secretKey)
+                authCode = try {
+                    viewModel.getTOTPCode(account.secretKey)
+                } catch (e: IllegalArgumentException) {
+                    context.stringResource(R.string.key_generate_error)
+                }
             }
             delay(1000L)
         }
